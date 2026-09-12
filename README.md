@@ -1,69 +1,192 @@
-# CalmCode Icons for VS Code
+# CalmCode Icons
 
-This extension adds a set of SVG icons for the VS Code Explorer. The project already includes all files from the `calmcodeicons-zed/icons` folder and connects them through the `CalmCode Icons` theme.
+Minimal, clean, and expressive SVG icon theme for VS Code.
 
-## Project structure
+CalmCode Icons gives your Explorer a calmer, more polished look with a soft palette, sharp readability, and support for a large set of popular languages, frameworks, config files, media assets, and common project folders.
 
-- `icons/` — all SVG icon files
-- `themes/calmcodeicons.json` — icon mapping for VS Code
-- `package.json` — extension manifest
+## Supported file types
 
-## How to run and test
+CalmCode Icons includes dedicated icons for the following file extensions and names:
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+### Programming languages and frameworks
 
-2. Open the project folder in VS Code.
+- `.rs` — Rust
+- `.js`, `.jsx` — JavaScript / React
+- `.ts`, `.tsx` — TypeScript / React
+- `.py` — Python
+- `.go` — Go
+- `.rb` — Ruby
+- `.php` — PHP
+- `.java` — Java
+- `.kt`, `.kts` — Kotlin
+- `.swift` — Swift
+- `.dart` — Dart
+- `.ex`, `.exs` — Elixir
+- `.html`, `.htm` — HTML
+- `.css`, `.scss`, `.sass`, `.less` — CSS / style files
+- `.vue` — Vue
+- `.svelte` — Svelte
+- `.sql` — SQL / database files
+- `.xml` — XML
+- `.yaml`, `.yml` — YAML config
+- `.toml` — TOML config
+- `.json` — JSON
+- `.svg` — SVG
+- `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`, `.ico` — images
+- `.mp4`, `.mp3`, `.wav` — media
+- `.fbx`, `.obj`, `.stl`, `.step`, `.stp`, `.gltf`, `.glb` — 3D assets
+- `.blend` — Blender
+- `.tscn` — Godot scene files
+- `.gd` — Godot scripts
+- `.wgsl` — WGSL
+- `.asm` — assembly
+- `.ttf`, `.otf` — fonts
+- `.txt` — plain text
+- `.props` — property files
+- `.class` — class files
+- `.lock` — lock files
+- `.svg` — vector graphics
+- `.log` — logs
 
-3. Press `F5` to launch a new Extension Development Host window.
+### Backend, tools, and config files
 
-4. In the new window, open Explorer and select the icon theme:
-   - Command Palette → "Preferences: File Icon Theme"
-   - choose `CalmCode Icons`
+- `Cargo.toml` — Cargo manifest
+- `package.json` — Node package manifest
+- `tsconfig.json` — TypeScript config
+- `jsconfig.json` — JavaScript config
+- `README.md`, `README` — documentation
+- `LICENSE` — license file
+- `.gitignore` — Git ignore
+- `.env` — environment file
+- `Dockerfile`, `docker-compose.yml`, `docker-compose.yaml` — Docker
+- `Makefile` — Make
+- `CMakeLists.txt` — CMake
+- `webpack.config.js` — webpack
+- `vite.config.ts` — Vite
+- `next.config.js` — Next.js
+- `tailwind.config.js` — Tailwind
+- `pyproject.toml`, `requirements.txt`, `setup.py` — Python setup
+- `.gitattributes` — Git attributes
+- `Makefile` — build tooling
+- `.env` — environment variables
+- `*.lock` — dependency lock files
 
-5. Check that files and folders are displayed with the appropriate SVG icons.
+### Languages and ecosystems included
 
-## How to activate the icons in production
+- C
+- C++
+- C#
+- F#
+- Go
+- Rust
+- Python
+- Java
+- JavaScript
+- TypeScript
+- Node.js
+- React
+- Vue
+- Svelte
+- PHP
+- Ruby
+- Swift
+- Dart
+- Flutter
+- Elixir
+- Erlang
+- Haskell
+- Clojure
+- Lua
+- R
+- Julia
+- OCaml
+- Kotlin
+- Shell
+- PowerShell
+- Docker
+- SQL
+- 3D / model assets
+- Game dev / Godot / WGSL
 
-1. Open `package.json` and replace:
-   - `publisher`: with your Marketplace username
-   - `repository.url`: with your GitHub repository
-2. Make sure all SVG files are present in `icons/` and correctly linked via `themes/calmcodeicons.json`.
-3. Package the extension:
-   ```bash
-   npx @vscode/vsce package
-   ```
-   This will create a `.vsix` file.
+## Supported folders
 
-## How to publish to the Marketplace
+CalmCode Icons also includes custom icons for common project folders and Git-related folders:
 
-1. Register in Azure DevOps / Visual Studio Marketplace and get a Personal Access Token (PAT).
-2. Log in to `vsce`:
-   ```bash
-   npx @vscode/vsce login your-name
-   ```
-3. Publish the extension:
-   ```bash
-   npx @vscode/vsce publish
-   ```
+- `src`
+- `.git`
+- `node_modules`
+- `test`
+- `tests`
+- `assets`
+- `public`
+- general project folders
+- Git folders and open/closed folder states
 
-Or directly:
+## Theme behavior
+
+The theme includes:
+
+- file icons for common extensions
+- file-name overrides for common manifests and config files
+- folder icons for project structure patterns
+- open/closed folder states
+- special handling for git-related and source folders
+
+## Install
+
+1. Open VS Code
+2. Go to Extensions
+3. Search for `CalmCode Icons`
+4. Click Install
+5. Open the Command Palette and choose:
+   - `Preferences: File Icon Theme`
+   - select `CalmCode Icons`
+
+## Development
+
+This project is structured as follows:
+
+- `icons/` — all SVG icon assets
+- `themes/calmcodeicons.json` — VS Code theme mapping
+- `package.json` — extension metadata and publishing config
+- `assets/` — shared icon set used across editor integrations
+
+## Local testing
+
+```bash
+npm install
+```
+
+Then launch the extension in a new development host:
+
+1. Open the project in VS Code
+2. Press `F5`
+3. In the new window, pick `CalmCode Icons` as the active file icon theme
+
+## Packaging
 
 ```bash
 npx @vscode/vsce package
+```
+
+This generates a `.vsix` package for manual installation or Marketplace publication.
+
+## Publish to Marketplace
+
+```bash
+npx @vscode/vsce login YOUR_PUBLISHER_NAME
 npx @vscode/vsce publish
 ```
 
-## Useful links
+## Roadmap
 
-- VS Code Extension Manifest: https://code.visualstudio.com/api/references/extension-manifest
-- VS Code File Icon Theme: https://code.visualstudio.com/api/extension-guides/file-icon-theme
-- Publishing extensions: https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+- expand folder icon coverage
+- refine the icon set for more project conventions
+- add even more language-specific and tooling-specific icons
+- improve consistency for both light and dark themes
 
-## Planned improvements
+## About
 
-- add separate icons for folders such as `src`, `components`, `public`, and `test`
-- create a cleaner color palette for both light and dark themes
-- add custom icons for project-specific files
+CalmCode Icons is built for developers who want a cleaner, calmer IDE without sacrificing clarity and discoverability.
+
+The goal is simple: make your project tree easier to scan, easier to navigate, and more aesthetically consistent across the tools you use every day.
