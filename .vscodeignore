@@ -1,0 +1,11 @@
+**/.DS_Store
+**/*.map
+.git/**
+.github/**
+.vscode/**
+node_modules/**
+.gitignore
+**/*.ts
+**/*.tsx
+**/*.js
+**/*.map

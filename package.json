@@ -1,0 +1,39 @@
+{
+  "name": "calmcodeicons",
+  "displayName": "CalmCode Icons",
+  "description": "Minimal SVG icon set for VS Code file and folder explorer.",
+  "version": "0.1.0",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "icon": "icons/folder.png",
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "calmcodeicons",
+        "label": "CalmCode Icons",
+        "path": "./themes/calmcodeicons.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-name/calmcodeicons"
+  },
+  "bugs": {
+    "url": "https://github.com/your-name/calmcodeicons/issues"
+  },
+  "homepage": "https://github.com/your-name/calmcodeicons",
+  "license": "MIT",
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  }
+}
