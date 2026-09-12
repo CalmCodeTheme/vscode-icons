@@ -1,69 +1,69 @@
 # CalmCode Icons for VS Code
 
-Это расширение добавляет набор SVG-икон для проводника VS Code. В проект уже скопированы все файлы из папки `calmcodeicons-zed/icons`, и они подключены через тему `CalmCode Icons`.
+This extension adds a set of SVG icons for the VS Code Explorer. The project already includes all files from the `calmcodeicons-zed/icons` folder and connects them through the `CalmCode Icons` theme.
 
-## Структура проекта
+## Project structure
 
-- `icons/` — все SVG-файлы иконок
-- `themes/calmcodeicons.json` — маппинг иконок для VS Code
-- `package.json` — манифест расширения
+- `icons/` — all SVG icon files
+- `themes/calmcodeicons.json` — icon mapping for VS Code
+- `package.json` — extension manifest
 
-## Как запустить и проверить
+## How to run and test
 
-1. Установите зависимости:
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Откройте папку проекта в VS Code.
+2. Open the project folder in VS Code.
 
-3. Нажмите `F5` для запуска нового окна Extension Development Host.
+3. Press `F5` to launch a new Extension Development Host window.
 
-4. В новом окне откройте Explorer и выберите тему иконок:
+4. In the new window, open Explorer and select the icon theme:
    - Command Palette → "Preferences: File Icon Theme"
-   - выберите `CalmCode Icons`
+   - choose `CalmCode Icons`
 
-5. Проверьте, что файлы и папки отображаются нужными SVG-иконками.
+5. Check that files and folders are displayed with the appropriate SVG icons.
 
-## Как сделать иконки активными в продакшн
+## How to activate the icons in production
 
-1. Откройте `package.json` и замените:
-   - `publisher`: на ваш ник в Marketplace
-   - `repository.url`: на ваш GitHub репозиторий
-2. Убедитесь, что в `icons/` лежат все SVG-файлы, и они корректно связаны через `themes/calmcodeicons.json`.
-3. Запустите упаковку:
+1. Open `package.json` and replace:
+   - `publisher`: with your Marketplace username
+   - `repository.url`: with your GitHub repository
+2. Make sure all SVG files are present in `icons/` and correctly linked via `themes/calmcodeicons.json`.
+3. Package the extension:
    ```bash
    npx @vscode/vsce package
    ```
-   Это создаст файл `.vsix`.
+   This will create a `.vsix` file.
 
-## Как опубликовать в Marketplace
+## How to publish to the Marketplace
 
-1. Зарегистрируйтесь в Azure DevOps / Visual Studio Marketplace и получите Personal Access Token (PAT).
-2. Войдите в `vsce`:
+1. Register in Azure DevOps / Visual Studio Marketplace and get a Personal Access Token (PAT).
+2. Log in to `vsce`:
    ```bash
    npx @vscode/vsce login your-name
    ```
-3. Опубликуйте расширение:
+3. Publish the extension:
    ```bash
    npx @vscode/vsce publish
    ```
 
-Или напрямую:
+Or directly:
 
 ```bash
 npx @vscode/vsce package
 npx @vscode/vsce publish
 ```
 
-## Полезные ссылки
+## Useful links
 
 - VS Code Extension Manifest: https://code.visualstudio.com/api/references/extension-manifest
 - VS Code File Icon Theme: https://code.visualstudio.com/api/extension-guides/file-icon-theme
 - Publishing extensions: https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
-## Дальнейшие улучшения
+## Planned improvements
 
-- добавить отдельные иконки для папок `src`, `components`, `public`, `test`
-- сделать более аккуратную цветовую палитру для светлой и тёмной темы
-- добавить custom icons для специфичные файлы вашего проекта
+- add separate icons for folders such as `src`, `components`, `public`, and `test`
+- create a cleaner color palette for both light and dark themes
+- add custom icons for project-specific files
