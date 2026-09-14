@@ -2,7 +2,7 @@
   "name": "calmcodeicons",
   "displayName": "CalmCode Icons",
   "description": "Minimal SVG icon set for VS Code file and folder explorer.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "calmcodetheme",
   "engines": {
     "vscode": "^1.95.0"
